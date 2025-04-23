@@ -3,13 +3,12 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const DarkToggle = ({ isMobile = false }) => {
-    const [darkMode, setDarkMode] = useState(false);
-
+    const [darkMode, setDarkMode] = useState(true);
     useEffect(() => {
-        const savedTheme = localStorage.getItem('theme') || 
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        setDarkMode(savedTheme === 'dark');
-        document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+        const savedTheme = localStorage.getItem('theme');
+        const theme = savedTheme || 'dark';
+        setDarkMode(theme === 'dark');
+        document.documentElement.classList.toggle('dark', theme === 'dark');
     }, []);
 
     const toggleTheme = () => {

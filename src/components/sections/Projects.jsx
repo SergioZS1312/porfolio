@@ -11,7 +11,7 @@ const projectsData = [
 		description: "Landing page para exhibición de productos artesanales (jabones y velas) con diseño atractivo y responsive.",
 		tags: ["Bootstrap", "C#", "ASP.NET"],
 		image: JabonesYumaIMG,
-		repo: "#",
+		repo: "https://github.com/SergioZS1312/JabonesYuma",
 		demo: "https://jabonesyuma.azurewebsites.net/",
 		featured: true
 	},
@@ -21,7 +21,7 @@ const projectsData = [
 		description: "Sitio informativo con artículos y recursos sobre programación web, diseño y buenas prácticas.",
 		tags: ["Bootstrap", "C#", "ASP.NET"],
 		image: BlogDevIMG,
-		repo: "#",
+		repo: "https://github.com/SergioZS1312/BlogDev",
 		demo: "https://blogdev.azurewebsites.net/"
 	},
 	{
@@ -30,7 +30,7 @@ const projectsData = [
 		description: "Landing page para exhibición de productos  (Camisetas, Mugs y Gorras) con diseño atractivo y responsive.",
 		tags: ["React", "Tailwind css"],
 		image: BogoCatIMG,
-		repo: "#",
+		repo: "https://github.com/SergioZS1312/bogocat-landing",
 		demo: "https://bogocat-landing.vercel.app/"
 	}
 ];

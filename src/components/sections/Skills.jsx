@@ -42,7 +42,7 @@ const Skills = () => {
 			{ name: "SQL Server", icon: <TbServer />, level: "Intermedio" },
 			{ name: "MySQL", icon: <TbServer />, level: "basico" },
 		],
-		cloud_devops: [
+		Herramientas: [
 			{ name: "Git", icon: <FaGitAlt />, level: "Intermedio" },
 			{ name: "Azure", icon: <FaMicrosoft />, level: "Basico" },		
 		],
