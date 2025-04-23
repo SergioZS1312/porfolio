@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Portafolio profesional de Sergio Zuluaga, Desarrollador Web Full Stack con más de 2 años de experiencia en C#, React y JavaScript">
+    <meta name="keywords" content="desarrollador web, full stack developer, C#, React, JavaScript, portfolio programador">
+    <meta name="author" content="Sergio Zuluaga">
+    
+    <meta property="og:title" content="Sergio Zuluaga | Desarrollador Web Full Stack">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Portafolio profesional de Sergio Zuluaga, Desarrollador Web Full Stack">
+
+    <title>Sergio Zuluaga | Desarrollador Web Full Stack</title>
+
+    <link rel="preload" href="/src/main.css" as="style">
+    <link rel="stylesheet" href="/src/main.css">
+    
+    <script type="module" src="/src/main.jsx" defer></script>
+</head>
+
+<body>
+    <div id="root" aria-busy="true"></div>
+
+    <noscript>
+        <div class="p-4 text-center bg-error-light dark:bg-error-dark text-white">
+            JavaScript está deshabilitado en tu navegador. Para ver este portafolio correctamente, por favor activa JavaScript.
+        </div>
+    </noscript>
+
+    <div id="preloader" 
+         class="fixed inset-0 bg-surface-light dark:bg-surface-dark z-[9999] grid place-items-center transition-opacity duration-300"
+         role="alert"
+         aria-live="assertive"
+         aria-label="Cargando la aplicación">
+        <div class="animate-pulse flex flex-col items-center gap-4">
+            <div class="w-16 h-16 bg-accent-primary-light dark:bg-accent-primary-dark rounded-full" 
+                 aria-hidden="true"></div>
+            <p class="text-lg font-medium">Cargando portafolio...</p>
+            <span class="sr-only">El portafolio se está cargando, por favor espera</span>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const preloader = document.getElementById('preloader');
+            const root = document.getElementById('root');
+            
+            function removePreloader() {
+                if (!preloader) return;
+                
+                preloader.setAttribute('aria-hidden', 'true');
+                preloader.style.opacity = '0';
+                
+                setTimeout(() => {
+                    preloader.remove();
+                    if (root) root.setAttribute('aria-busy', 'false');
+                }, 300);
+            }
+            
+            if (document.readyState === 'complete') {
+                setTimeout(removePreloader, 500);
+            } else {
+                window.addEventListener('load', function() {
+                    setTimeout(removePreloader, 500);
+                }, { once: true });
+            }
+            
+            setTimeout(removePreloader, 3000);
+        })();
+    </script>
+</body>
+</html>
